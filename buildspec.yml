@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-    ECR_REPO_NAME: my-angular-app
+    ECR_REPO_NAME: my_angular_project_ecr_repo
   parameter-store:
     DOCKERHUB_TOKEN: /dockerhub/token
     DOCKERHUB_USER: /dockerhub/user
