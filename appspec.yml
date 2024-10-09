@@ -1,17 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: dist/my-angular-project
-    destination: /var/www/my-angular-project
-permissions:
-  - object: /var/www/my-angular-project
-    pattern: '**'
-    mode: '0755'
-    owner: root
-    group: root
-    type:
-      - file
-      - directory
+  - source: imagedefinitions.json
+    destination: /tmp/
+
 hooks:
   BeforeInstall:
     - location: scripts/stop_containers.sh
@@ -25,4 +17,3 @@ hooks:
     - location: scripts/deploy.sh
       timeout: 300
       runas: root
-      
